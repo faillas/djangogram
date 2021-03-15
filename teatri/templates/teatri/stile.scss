@@ -1,0 +1,317 @@
+@mixin Tabelle{
+    border:1px solid #eee;
+    border-collapse:collapse;
+    padding:3px 5px;
+    }
+
+@mixin DescImg{
+    display:block;
+    margin:0 auto;
+    text-align:center;
+        }
+@mixin Bordi{
+    border-top: 3px solid black;
+    border-bottom: 3px solid black; 
+} 
+@mixin Margini{
+    margin-left: 5%;
+    margin-right: 5%;
+}  
+
+@media(max-width: 1365px){
+    #myBar{
+        display: block;
+    }
+    .progress.fixed-bottom{
+        display:none;
+    }
+
+}
+
+@media(min-width: 1366px){
+    #myBar{
+        display: none;
+    }
+    .progress.fixed-bottom{
+        display:block;
+    }
+
+}
+
+body{
+    position: relative;
+    p {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+        margin-top:-15px;
+        @include Margini; 
+        text-align:justify;
+      }   
+    h2{
+        @include Margini; 
+    }    
+    table{
+        @include Margini; 
+        font-family: 'Times New Roman', Times, serif;
+        text-align:left;
+        display:block;
+        margin:0 auto;
+    }   
+    ul{
+        @include Margini; 
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+    #myBar{
+        height: 8px;
+        width: 0%;
+    }
+    #Menu{
+        position: fixed;
+        margin-top: 8px;
+        height: 100%;
+        z-index:99;
+        overflow: scroll;       
+
+        #navbar-example3{
+            overflow: scroll;       
+        }
+    }
+    .col{
+        margin-top:100px;
+        .scrollspy-example-2{
+            position: relative;
+            height: 1600px;
+            #Indicetabelle{
+                text-align: left;
+                p{
+                    text-align: left;
+                }
+            }
+            #NotazionieConvenzioni{
+                .table-responsive{
+                    @include Margini; 
+                    table, td, th {
+                        @include Tabelle; 
+                    }
+                    
+                    td{
+                        font-style: normal;
+                    }
+                    
+                    th{
+                        font-style: bold;
+                    }
+                }
+            }
+            #Principaliusi{
+                .card.mb-3{
+                    .card-body{
+                        .card-text{
+                            @include DescImg;
+                        }
+                    }
+                }
+            }
+        #Ilrapportoconleimmagini{
+            .card.mb-3{
+                .card-body{
+                    .card-text{
+                        @include DescImg;
+                    }
+                }
+            }
+        }
+        #Profiliteatro{
+            .card.mb-3{
+                .card-body{
+                    .card-text{
+                        @include DescImg;
+                    }
+                }
+            }
+        }
+        #Profiliprogetto{
+            .card.mb-3{
+                .card-body{
+                    .card-text{
+                        @include DescImg;
+                    }
+                }
+            }
+        }
+        #Profiliinformativi{
+            .card.mb-3{
+                .card-body{
+                    .card-text{
+                        @include DescImg;
+                    }
+                }
+            }
+        }
+        #Leanalisieseguite{
+            .menomargin{
+                margin-left: -5%;
+                margin-right: -5%;
+                .bordertopbottom{
+                    @include Bordi;
+                }  
+            }
+        }
+        #Iltestoingenerale{
+            .menomargin{
+                margin-left: -5%;
+                margin-right: -5%;
+                .bordertopbottom{
+                    @include Bordi;
+                }
+            }
+            span{
+                .table-responsive{
+                    @include Margini; 
+                    table, td, th {
+                        @include Tabelle;  
+                    }
+                    
+                    td{
+                        font-style: normal;
+                    }
+                    
+                    th{
+                        font-style: bold;
+                    }
+                }
+            }
+        }
+        #Tagehashtag{
+            #TAB7{
+                .card.mb-3{
+                    .card-body{
+                        .card-text{
+                            @include DescImg;
+                        }
+                    }
+                }
+            }
+            .menomargin{
+                margin-left: -5%;
+                margin-right: -5%;
+                .bordertopbottom{
+                    @include Bordi;
+                    }  
+            }
+            .table-responsive{
+                @include Margini; 
+            }
+        }
+        #Programmaperlanalisigeneraledeltesto{
+            .borderbottom{
+                border-bottom: 3px solid black;
+            }
+            .code5{
+                margin-left: 8%;
+            }
+            .code10{
+                margin-left: 10%;
+            }
+            .code15{
+                margin-left: 12%;
+            }          
+            .code20{
+                margin-left: 15%;
+            }
+        }
+        #Espressioneregolareperglihashtag{
+            .bordertopbottom{
+                @include Bordi;
+            }
+            .code5{
+                margin-left: 8%;
+            }
+            .code10{
+                margin-left: 10%;
+            }
+            .code15{
+                margin-left: 12%;
+            }          
+            .code20{
+                margin-left: 15%;
+            }
+        }
+        #Espressioneregolareperitag{
+            .bordertopbottom{
+                @include Bordi;
+            }
+            .code5{
+                margin-left: 8%;
+            }
+            .code10{
+                margin-left: 10%;
+            }
+            .code15{
+                margin-left: 12%;
+            }          
+        }
+        #Programmaperlanalisiditagehashtag{
+            .bordertopbottom{
+                @include Bordi;
+            }
+            .code5{
+                margin-left: 8%;
+            }
+            .code10{
+                margin-left: 10%;
+            }
+            .code15{
+                margin-left: 12%;
+            }          
+        }
+        #Programmaperlestrazionedelleimmaginipiupiaciute{
+            .bordertopbottom{
+                @include Bordi;             
+            }
+            .code5{
+                margin-left: 8%;
+            }
+        }
+        #Bibliografia{
+            .bordertop{
+                border-top: 3px solid black;
+            }
+        }
+        #Immaginipiuapprezzate{
+            span{
+                .table-responsive{
+                    @include Margini; 
+                    table, td, th {
+                        @include Tabelle; 
+                    }
+                    
+                    td{
+                        font-style: normal;
+                    }
+                    
+                    th{
+                        font-style: bold;
+                    }
+                    }
+                }
+                .card.mb-3{
+                    .card-body{
+                        .card-text{
+                            @include DescImg;
+                        }
+                    }
+                }
+            }          
+        }
+    }
+}
+
+
+
+
+
+
+
+

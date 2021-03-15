@@ -1,0 +1,189 @@
+{% load static %}
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta charset="UTF-8"/>
+  <link rel="icon" href="{% static 'img/favicon.png' %}" type="image/png" />
+  <link name="viewport" content="width=device-width, initial-scale=1" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"/>
+  <title>{{Profili.testo}} | DjangoGram</title> 
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>          
+</head>
+  <body class="text-white bg-dark">
+    <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-danger" href="http://www.DjangoGram.pythonanywhere.com/">DjangoGram</a> 
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+          {% if Profili.testo == 'Profili Teatro' %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://www.DjangoGram.pythonanywhere.com/profili/Teatro/">Profili Teatro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.DjangoGram.pythonanywhere.com/profili/Progetto/">Profili Progetto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.DjangoGram.pythonanywhere.com/profili/Informativi/">Profili Informativi</a>
+          </li>
+          {% endif %}
+          {% if Profili.testo == 'Profili Progetto' %}
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.DjangoGram.pythonanywhere.com/profili/Teatro/">Profili Teatro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://www.DjangoGram.pythonanywhere.com/profili/Progetto/">Profili Progetto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.DjangoGram.pythonanywhere.com/profili/Informativi/">Profili Informativi</a>
+          </li>
+          {% endif %}
+          {% if Profili.testo == 'Profili Informativi' %}
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.DjangoGram.pythonanywhere.com/profili/Teatro/">Profili Teatro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.DjangoGram.pythonanywhere.com/profili/Progetto/">Profili Progetto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="http://www.DjangoGram.pythonanywhere.com/profili/Informativi/">Profili Informativi</a>
+          </li>
+          {% endif %}
+          </ul>
+        </div>
+      </div>
+    </nav>  
+  </div> 
+    <p><br><br></p> 
+       <img class="img-fluid mx-auto d-block" src="
+        {% if Profili.testo == 'Profili Teatro' %} {% static 'img/teatro.png' %} {% endif %}  
+        {% if Profili.testo == 'Profili Progetto' %} {% static 'img/progetto.png' %} {% endif %}
+        {% if Profili.testo == 'Profili Informativi' %} {% static 'img/informativi.png' %} {% endif %}
+        "/>
+    <p><br><br></p>     
+    <p><br><br></p>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" >
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1" title="Valori"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" title="Immagini"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" title="Hashtag"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" title="Tag"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" title="Lista Teatri"></button>
+        {% if Frequenze %}
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6" title="{% if Profili.testo == 'Profili Teatro' %}Anni{% endif %}{% if Profili.testo == 'Profili Informativi' %}Luoghi{% endif %}"></button>
+        {% endif %}
+      </div>      
+      <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <h3 class="text-center">Valori</h3>
+            <p><br><br></p>
+            <table class="table table-dark text-center">
+              <tr><td>Parole</td><td>Vocabolario</td><td>N° Hashtag</td><td>Vocabolario Hashtag</td><td>N° Tag</td><td>Vocabolario Tag</td></tr>
+              <tr><td>{{Profili.parole}}</td><td>{{Profili.vocabolario}}</td><td>{{Profili.n_hashtag}}</td><td>{{Profili.v_hashtag}}</td><td>{{Profili.n_tag}}</td><td>{{Profili.v_tag}}</td></tr>
+            </table>
+            <p><br><br></p>
+            <h4 class="text-center">Valori Medi:</h4>
+            <p><br><br></p>
+            <table class="table table-dark text-center">
+              <tr><td>Post/profilo</td><td>Parole/post</td><td>Caratteri/post</td><td>Hashtag/post</td><td>Tag/post</td></tr>
+              <tr><td>{{Profili.post_medi}}</td><td>{{Profili.parole_medie}}</td><td>{{Profili.caratteri_medi}}</td><td>{{Profili.hashtag_medi}}</td><td>{{Profili.tag_medi}}</td></tr>
+            </table>
+            <p><br><br></p>
+          </div>
+          <div class="carousel-item" >
+            <h3 class="text-center">Tipologie Immagini</h3>
+            <p><br><br></p>
+            <table class="table table-dark text-center">
+              <tr><td>Casual</td><td>Professional</td><td>casual</td></tr>
+              <tr><td>{{Profili.casual}}</td><td>{{Profili.professional}}</td><td>{{Profili.designed}}</td></tr>
+            </table>
+            <p><br><br></p>
+            <h4 class="text-center">Soggetti:</h4>
+            <p><br><br></p>
+            <table class="table table-dark text-center">
+              <tr><td>Grafica</td><td>Gruppo</td><td>Singolo</td><td>Scena</td></tr>
+              <tr><td>{{Profili.grafica}}</td><td>{{Profili.gruppo}}</td><td>{{Profili.singolo}}</td><td>{{Profili.scena}}</td></tr>
+            </table>
+            <p><br><br></p>
+          </div>
+          <div class="carousel-item" >
+            <h3 class="text-center">I 20 Hashtag più frequenti</h3>
+            <p><br><br></p>
+            <table class="table table-dark text-center">
+                {% for nome_hashtag in Hashtag %}
+                <tr><td>{{nome_hashtag}}</td></tr>
+                {% endfor %}
+            </table>
+            <p><br><br></p>
+          </div>
+          <div class="carousel-item" >
+            <h3 class="text-center">I 20 Tag più frequenti</h3>
+            <p><br><br></p>
+            <table class="table table-dark text-center">             
+              {% for nome_tag in Tag %}
+              <tr><td>{{nome_tag}}</td></tr>
+              {% endfor %}             
+            </table>
+            <p><br><br></p>
+          </div>
+          <div class="carousel-item" >
+            <h3 class="text-center">Lista teatri</h3>
+            <p><br><br></p>
+            <table class="table table-dark text-center"> 
+              {% for nome_teatro in Teatri %}
+              <tr>            
+                <td>{{nome_teatro}}</td>              
+              </tr>      
+              {% endfor %}  
+            </table>
+            <p><br><br></p>
+          </div>
+          {% if Frequenze %}
+          <div class="carousel-item" >
+            {% if Profili.testo == 'Profili Teatro' %}
+            <h3 class="text-center">I 10 Anni più frequenti</h3>
+            {% endif %}  
+            {% if Profili.testo == 'Profili Informativi' %}
+            <h3 class="text-center">I 10 Luoghi più frequenti</h3>
+            {% endif %}  
+            <p><br><br></p>
+            <table class="table table-dark text-center">                           
+              {% for nome_f in Frequenze %}
+              <tr><td>{{nome_f}}</td></tr> 
+              {% endfor %}  
+            </table>
+            <p><br><br></p>
+          </div>
+          {% endif %}  
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <p><br><br></p>
+      <p><br><br></p>
+      <a href="{% if Profili.testo == 'Profili Teatro' %}https://simonefailla.files.wordpress.com/2020/11/dylan-profili-teatro.pdf{% endif %}
+               {% if Profili.testo == 'Profili Progetto' %}https://simonefailla.files.wordpress.com/2020/11/dylan-profili-progetto.pdf{% endif %}
+               {% if Profili.testo == 'Profili Informativi' %}https://simonefailla.files.wordpress.com/2020/11/dylan-profili-informativi.pdf{% endif %}">
+          <h3 class="text-center">Valori di DyLan</h3>
+      </a>
+      <footer class="text-center">
+        <p><br><br></p>
+        <p><br><br></p>
+        Simone Failla 2019-2020 <br>
+        <a target="_blank" href="https://simonefailla.wordpress.com">simonefailla.wordpress.com</a>
+        <p><br><br></p>
+      </footer>     
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+  </body>
+</html>

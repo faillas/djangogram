@@ -1,0 +1,244 @@
+@media (max-width: 1365px) {
+  #myBar {
+    display: block; }
+
+  .progress.fixed-bottom {
+    display: none; } }
+@media (min-width: 1366px) {
+  #myBar {
+    display: none; }
+
+  .progress.fixed-bottom {
+    display: block; } }
+body {
+  position: relative; }
+
+body p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  margin-top: -15px;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: justify; }
+
+body h2 {
+  margin-left: 5%;
+  margin-right: 5%; }
+
+body table {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: left;
+  display: block;
+  margin: 0 auto; }
+
+body ul {
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 16px;
+  font-family: 'Times New Roman', Times, serif; }
+
+body #myBar {
+  height: 8px;
+  width: 0%; }
+
+body #Menu {
+  position: fixed;
+  margin-top: 8px;
+  height: 100%;
+  z-index: 99;
+  overflow: scroll; }
+
+body .col {
+  margin-top: 100px; }
+
+body .col .scrollspy-example-2 {
+  position: relative;
+  height: 1600px; }
+
+body .col .scrollspy-example-2 #Indicetabelle {
+  text-align: left; }
+
+body .col .scrollspy-example-2 #Indicetabelle p {
+  text-align: left; }
+
+body .col .scrollspy-example-2 #NotazionieConvenzioni .table-responsive {
+  margin-left: 5%;
+  margin-right: 5%; }
+
+body .col .scrollspy-example-2 #NotazionieConvenzioni .table-responsive table, body .col .scrollspy-example-2 #NotazionieConvenzioni .table-responsive td, body .col .scrollspy-example-2 #NotazionieConvenzioni .table-responsive th {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  padding: 3px 5px; }
+
+body .col .scrollspy-example-2 #NotazionieConvenzioni .table-responsive td {
+  font-style: normal; }
+
+body .col .scrollspy-example-2 #NotazionieConvenzioni .table-responsive th {
+  font-style: bold; }
+
+body .col .scrollspy-example-2 #Principaliusi .card.mb-3 .card-body .card-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+body .col .scrollspy-example-2 #Ilrapportoconleimmagini .card.mb-3 .card-body .card-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+body .col .scrollspy-example-2 #Profiliteatro .card.mb-3 .card-body .card-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+body .col .scrollspy-example-2 #Profiliprogetto .card.mb-3 .card-body .card-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+body .col .scrollspy-example-2 #Profiliinformativi .card.mb-3 .card-body .card-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+body .col .scrollspy-example-2 #Leanalisieseguite .menomargin {
+  margin-left: -5%;
+  margin-right: -5%; }
+
+body .col .scrollspy-example-2 #Leanalisieseguite .menomargin .bordertopbottom {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Iltestoingenerale .menomargin {
+  margin-left: -5%;
+  margin-right: -5%; }
+
+body .col .scrollspy-example-2 #Iltestoingenerale .menomargin .bordertopbottom {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Iltestoingenerale span .table-responsive {
+  margin-left: 5%;
+  margin-right: 5%; }
+
+body .col .scrollspy-example-2 #Iltestoingenerale span .table-responsive table, body .col .scrollspy-example-2 #Iltestoingenerale span .table-responsive td, body .col .scrollspy-example-2 #Iltestoingenerale span .table-responsive th {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  padding: 3px 5px; }
+
+body .col .scrollspy-example-2 #Iltestoingenerale span .table-responsive td {
+  font-style: normal; }
+
+body .col .scrollspy-example-2 #Iltestoingenerale span .table-responsive th {
+  font-style: bold; }
+
+body .col .scrollspy-example-2 #Tagehashtag #TAB7 .card.mb-3 .card-body .card-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+body .col .scrollspy-example-2 #Tagehashtag .menomargin {
+  margin-left: -5%;
+  margin-right: -5%; }
+
+body .col .scrollspy-example-2 #Tagehashtag .menomargin .bordertopbottom {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Tagehashtag .table-responsive {
+  margin-left: 5%;
+  margin-right: 5%; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisigeneraledeltesto .borderbottom {
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisigeneraledeltesto .code5 {
+  margin-left: 8%; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisigeneraledeltesto .code10 {
+  margin-left: 10%; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisigeneraledeltesto .code15 {
+  margin-left: 12%; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisigeneraledeltesto .code20 {
+  margin-left: 15%; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperglihashtag .bordertopbottom {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperglihashtag .code5 {
+  margin-left: 8%; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperglihashtag .code10 {
+  margin-left: 10%; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperglihashtag .code15 {
+  margin-left: 12%; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperglihashtag .code20 {
+  margin-left: 15%; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperitag .bordertopbottom {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperitag .code5 {
+  margin-left: 8%; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperitag .code10 {
+  margin-left: 10%; }
+
+body .col .scrollspy-example-2 #Espressioneregolareperitag .code15 {
+  margin-left: 12%; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisiditagehashtag .bordertopbottom {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisiditagehashtag .code5 {
+  margin-left: 8%; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisiditagehashtag .code10 {
+  margin-left: 10%; }
+
+body .col .scrollspy-example-2 #Programmaperlanalisiditagehashtag .code15 {
+  margin-left: 12%; }
+
+body .col .scrollspy-example-2 #Programmaperlestrazionedelleimmaginipiupiaciute .bordertopbottom {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black; }
+
+body .col .scrollspy-example-2 #Programmaperlestrazionedelleimmaginipiupiaciute .code5 {
+  margin-left: 8%; }
+
+body .col .scrollspy-example-2 #Bibliografia .bordertop {
+  border-top: 3px solid black; }
+
+body .col .scrollspy-example-2 #Immaginipiuapprezzate span .table-responsive {
+  margin-left: 5%;
+  margin-right: 5%; }
+
+body .col .scrollspy-example-2 #Immaginipiuapprezzate span .table-responsive table, body .col .scrollspy-example-2 #Immaginipiuapprezzate span .table-responsive td, body .col .scrollspy-example-2 #Immaginipiuapprezzate span .table-responsive th {
+  border: 1px solid #eee;
+  border-collapse: collapse;
+  padding: 3px 5px; }
+
+body .col .scrollspy-example-2 #Immaginipiuapprezzate span .table-responsive td {
+  font-style: normal; }
+
+body .col .scrollspy-example-2 #Immaginipiuapprezzate span .table-responsive th {
+  font-style: bold; }
+
+body .col .scrollspy-example-2 #Immaginipiuapprezzate .card.mb-3 .card-body .card-text {
+  display: block;
+  margin: 0 auto;
+  text-align: center; }
+
+/*# sourceMappingURL=stile.scss.map */
+/*# sourceMappingURL=stile.scss.map */
+
+/*# sourceMappingURL=stile.css.map */
